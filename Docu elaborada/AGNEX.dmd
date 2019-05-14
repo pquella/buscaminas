@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="AGNEX" id="8801CF1D-2DC8-C016-31F7-09C554312BAC" version="3.5">
+<createdBy>profesor</createdBy>
+<createdTime>2019-05-14 15:55:33 UTC</createdTime>
+<ownerDesignName>AGNEX</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8801CF1D-2DC8-C016-31F7-09C554312BAC</designId>
+</OSDM_Design>
