@@ -219,3 +219,23 @@
 | Fuente          | Analista                                                                                                                                                                    |             |      |
 | Prioridad       | Alta                                                                                                                                                                        | Media       | Baja |
 | Relacionado con |                                                                                                                                                                             |             |      |
+
+ANEXO 1: MATRIZ DE CUMPLIMIENTO DE REQUISITOS
+
+| **CASO DE USO** | **REQUISITOS FUNCIONALES RF-XX**                  |       |       |       |       |       |       |       |       |        |        |        |   |
+|-----------------|---------------------------------------------------|-------|-------|-------|-------|-------|-------|-------|-------|--------|--------|--------|---|
+|                 | **1**                                             | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** |   |
+| CU1             | Consultar lista de usuarios.                      |       |       |       | X     |       |       |       |       |        |        |        |   |
+| CU2             | Crear nuevo usuario.                              |       |       |       | X     |       |       |       |       |        |        |        |   |
+| CU3             | Modificar usuario.                                |       |       |       | X     |       |       |       |       |        |        |        |   |
+| CU4             | Suprimir usuario.                                 |       |       |       | X     |       |       |       |       |        |        |        |   |
+| CU5             | Consultar de artefactos.                          | X     | X     |       |       | X     | X     | X     | X     | X      | X      |        |   |
+| CU6             | Crear nuevo artefacto.                            | X     |       |       |       |       |       |       |       |        |        |        | X |
+| CU7             | Modificar artefacto.                              | X     | X     |       |       |       |       |       |       |        |        |        |   |
+| CU8             | Imprimir lista de artefactos con filtros previos. | X     |       |       |       |       |       |       | X     | X      |        | X      |   |
+| CU9             | Suprimir artefacto.                               | X     |       |       |       |       |       |       |       |        |        |        |   |
+| CU10            | Consultar batida.                                 | X     |       |       |       |       |       | X     |       |        |        |        |   |
+| CU11            | Crear batida.                                     | X     |       |       |       |       |       | X     |       |        |        |        |   |
+| CU12            | Modificar batida.                                 | X     |       |       |       |       |       | X     |       |        |        |        |   |
+| CU13            | Imprimir batida.                                  |       |       |       |       |       |       | X     |       |        |        |        |   |
+| CU14            | Consultar objetos sobre visor GIS                 | X     |       | X     |       | X     | X     |       |       |        |        |        |   |
