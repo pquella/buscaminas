@@ -1,6 +1,6 @@
 # GESTIÓN DE UXO EN CAMPOS DE MANIOBRAS.
 ### alias Buscaminas 
-1. En el CNMTSG, se encuentran diversos artefactos sin explosionar (NOEX) o caídas fuera de las zonas de tiro, el control actualmente se lleva mediante un fichero de Excel.
+1. En el CNMTSG, se encuentran diversos artefactos sin explosionar (UXO) o caídas fuera de las zonas de tiro, el control actualmente se lleva mediante un fichero de Excel.
 1. Se necesita un sistema que permita llevar el control de los artefactos sin explosionar (UXO) que se encuentran en el Campo Nacional de Maniobras y Tiro de San Gregorio (CNMTSG).
 1. El sistema debe permitir dar de alta nuevos artefactos encontrados, incorporando a él además de la información del mismo, las fotos que se hagan para aumentar todo lo posible su posterior localización para su retirada.
 1. El sistema deber permitir cargar la cartografía de la zona del CNMTSG.
