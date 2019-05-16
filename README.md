@@ -1,4 +1,4 @@
-![](media/8af16a458ecc5698722f425eb6472f64.png)
+![](imagenes/uxo.png)
 
 GESTIÓN DE UXO EN CAMPOS DE MANIOBRAS.
 
@@ -18,7 +18,7 @@ GESTIÓN DE UXO EN CAMPOS DE MANIOBRAS.
 
 4.  El sistema deber permitir cargar la cartografía de la zona del CNMTSG.
 
-![](media/38fde0c1f23001a30022ec8cc10eb57b.jpg)
+![](imagenes/uxo2.jpg)
 
 El control de acceso se llevará a cabo mediante un login de usuario que tendrá
 asociado un perfil. Habrá usuarios con perfil tipo administrador y usuarios de
