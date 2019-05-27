@@ -7,7 +7,7 @@
 
 17 de mayo de 2018
 
-**Número del Sprint:** _1_
+**Número del Sprint:** 1
 
 **Asistentes a la reunión** : Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
 
@@ -23,11 +23,11 @@ Se trataron los siguientes temas:
 
 - Se acuerda distribuir los diferentes roles entre el personal del equipo, que quedan como sigue:
 
-**Propietario del proyecto** _(Proyect Owner):_ Juan Manuel García Rodríguez
+`**Propietario del proyecto**` _(Proyect Owner):_ Juan Manuel García Rodríguez
 
-**Scrum Master** : Juan Manuel García Rodríguez
+`**Scrum Master**` : Juan Manuel García Rodríguez
 
-**Equipo de trabajo:** Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
+`**Equipo de trabajo:**` Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
 
 
 ####  2.2 **. Establecimiento del pivote**
