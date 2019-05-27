@@ -9,8 +9,7 @@
 
 **Número del Sprint:** 1
 
-**Asistentes a la reunión** : Julio Rodríguez Romero, José María Baviera Viguer,  
-Julio César Martín Martín y José Luis Rodríguez Molleja
+**Asistentes a la reunión** : Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
 
 ### 2. **Objetivos de la reunión**
 
@@ -24,11 +23,11 @@ Se trataron los siguientes temas:
 
 - Se acuerda distribuir los diferentes roles entre el personal del equipo, que quedan como sigue:
 
-`**Propietario del proyecto** _(Proyect Owner):` _ Juan Manuel García Rodríguez
+**Propietario del proyecto** _(Proyect Owner):_ Juan Manuel García Rodríguez
 
-`**Scrum Master**` : Juan Manuel García Rodríguez
+**Scrum Master**: Juan Manuel García Rodríguez
 
-`**Equipo de trabajo:**` Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
+**Equipo de trabajo:** Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
 
 
 ####  2.2 **. Establecimiento del pivote**
@@ -46,7 +45,7 @@ Se trataron los siguientes temas:
 - Obtener usuarios y mostrarlos
 - Diagramas de secuencia (leer artefacto y pintarlo, leer y autenticar usuario)
 - Diagrama _burndown_
-- Tabla _Kan-ban_
+- Tabla _kan-ban_
 - _Sprint backlog_
 - Acta del _sprint_ (este documento)
 
