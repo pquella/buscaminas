@@ -1,273 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <title>AGNEX</title>
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <title>AGNEX</title>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-    }
-  </style>
-  <!-- Custom styles for this template -->
-  <link href="css/album.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-    crossorigin="" />
-  <!-- EL fichero .js SIEMPRE DESPUES de .css -->
-  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-    crossorigin=""></script>
-  <style>
-    #map {
-      /* width: 800px;*/
-      height: 750px;
-      box-shadow: 5px 5px 5px #888;
-    }
-  </style>
-</head>
 
-<body>
-  <header>
-    <div class="collapse bg-dark" id="acercaDe">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4">
-            <h4 class="text-white">Acerca de</h4>
-            <p class="text-muted">
-              Práctica de Dirección de Proyectos sobre la Gestión de UXO en Campos de Maniobras &copy; 2019 Ministerio
-              de Defensa
-            </p>
-          </div>
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Contacto</h4>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-white">Síguenos en Twitter</a></li>
-              <li><a href="#" class="text-white">Un Like en Facebook</a></li>
-              <li><a href="#" class="text-white">Correo Electrónico</a></li>
-            </ul>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/album.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <!-- EL fichero .js SIEMPRE DESPUES de .css -->
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+    <style>
+      #map {
+        /* width: 800px;*/
+        height: 750px;
+        box-shadow: 5px 5px 5px #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="acercaDe">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Acerca de</h4>
+              <p class="text-muted">
+                Práctica de Dirección de Proyectos sobre la Gestión de UXO en
+                Campos de Maniobras &copy; 2019 Ministerio de Defensa
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contacto</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Síguenos en Twitter</a></li>
+                <li><a href="#" class="text-white">Un Like en Facebook</a></li>
+                <li><a href="#" class="text-white">Correo Electrónico</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <img src="img/explosion.png" class="my-1">
-        <!-- <i class="fas fa-bomb"></i> -->
-        <strong>AGNEX - Gestión de UXO en CMT</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opcionesMenu"
-        aria-controls="opcionesMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="img/explosion.png" class="my-1" />
+          <!-- <i class="fas fa-bomb"></i> -->
+          <strong>AGNEX - Gestión de UXO en CMT</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#opcionesMenu"
+          aria-controls="opcionesMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="opcionesMenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Artefactos</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Nuevo</a>
-              <a class="dropdown-item" href="#">Consultar</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Batidas</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown02">
-              <a class="dropdown-item" href="#">Nueva</a>
-              <a class="dropdown-item" href="#">Consultar</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Informes</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown03">
-              <a class="dropdown-item" href="#">Artefactos por fecha</a>
-              <a class="dropdown-item" href="#">Artefactos por estado</a>
-              <a class="dropdown-item" href="#">Artefactos por Tipo</a>
-              <a class="dropdown-item" href="#">Batida</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Búsqueda">
-        </form>
+        <div class="collapse navbar-collapse" id="opcionesMenu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown01"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Artefactos</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Nuevo</a>
+                <a class="dropdown-item" href="#">Consultar</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown02"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Batidas</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown02">
+                <a class="dropdown-item" href="#">Nueva</a>
+                <a class="dropdown-item" href="#">Consultar</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown03"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Informes</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="#">Artefactos por fecha</a>
+                <a class="dropdown-item" href="#">Artefactos por estado</a>
+                <a class="dropdown-item" href="#">Artefactos por Tipo</a>
+                <a class="dropdown-item" href="#">Batida</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Búsqueda" />
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container-fluid">
+      <div class="row">
+        <div class="col-1"></div>
+        <div id="map" class="col-10 mt-2"></div>
+        <div class="col-1"></div>
       </div>
-    </nav>
-  </header>
-  <main role="main" class="container-fluid">
-    <div class="row">
-      <div class="col-1"></div>
-      <div id="map" class="col-10 mt-2"></div>
-      <div class="col-1"></div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="text-muted">
-    <div class="container">
-      <p>Gestión de UXO en Campos de Maniobras &copy; 2019 Ministerio de Defensa</p>
-    </div>
-  </footer>
+    <footer class="text-muted">
+      <div class="container">
+        <p>
+          Gestión de UXO en Campos de Maniobras &copy; 2019 Ministerio de
+          Defensa
+        </p>
+      </div>
+    </footer>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script>
-      //aqui se puede implementar un metodo que lea datos en formato GEOJSON
-      //las capas que deben existir son: Localizado,Pendiente de desactivación, Destruido, Retirado, No localizado
-      var localizado = new L.LayerGroup();
-      var pendiente = new L.LayerGroup();
-      var destruido = new L.LayerGroup();
-      var retirado = new L.LayerGroup();
-      var noLocalizado = new L.LayerGroup();
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function popUpInfo(feature, layer) {
+        // does this feature have a property named popupContent?
+        if (feature.properties && feature.properties.registro) {
+          layer.bindPopup(
+            "<b>" +
+              feature.properties.registro +
+              "</b><br>" +
+              '<img src="' +
+              feature.properties.foto +
+              '" style="width:125px;height:100px;"><br>' +
+              "Artefacto: " +
+              feature.properties.tipo +
+              "<br>" +
+              "Comunicado por: " +
+              feature.properties.comunicadoPor +
+              "<br>" +
+              "En Fecha: " +
+              feature.properties.fecha
+          );
+        }
+      }
+
+      var noexRetirado = {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: {
+              registro: "4334",
+              estado: "Retirado",
+              fecha: "11/01/2017",
+              tipo: "Mortero 80mm.",
+              comunicadoPor: "BRILEG",
+              foto: "img/uxo2.jpg"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-0.9911, 41.891259]
+            }
+          },
+          {
+            type: "Feature",
+            properties: {
+              registro: "4666",
+              estado: "Retirado",
+              fecha: "12/05/2018",
+              tipo: "Granada de mano",
+              comunicadoPor: "CENAD",
+              foto: "img/uxo1.jpg"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-0.97912, 41.833]
+            }
+          }
+        ]
+      };
+
+      var noexPendiente = {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: {
+              registro: "4678",
+              estado: "Pendiente",
+              fecha: "24/03/2018",
+              tipo: "Mortero 105mm.",
+              comunicadoPor: "AGM",
+              foto: "img/uxo2.jpg"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-0.99934, 41.859059]
+            }
+          },
+          {
+            type: "Feature",
+            properties: {
+              registro: "4832",
+              estado: "Pendiente",
+              fecha: "12/06/2018",
+              tipo: "Granada de mano",
+              comunicadoPor: "CENAD",
+              foto: "img/uxo1.jpg"
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [-0.96412, 41.812]
+            }
+          }
+        ]
+      };
 
       var greenIcon = new L.Icon({
-          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41]
+        iconUrl:
+          "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png",
+        shadowUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
       });
 
       var blueIcon = new L.Icon({
-          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
-          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41]
+        iconUrl:
+          "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png",
+        shadowUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
       });
 
       var redIcon = new L.Icon({
-          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41]
+        iconUrl:
+          "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+        shadowUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
       });
 
       var yellowIcon = new L.Icon({
-          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
-          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41]
+        iconUrl:
+          "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png",
+        shadowUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
       });
 
       var greyIcon = new L.Icon({
-          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
-          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41]
+        iconUrl:
+          "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png",
+        shadowUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
       });
 
-     // var localizadoStyle = {
-     //     "color": "#ffff00",
-     //     "weight": 5,
-     //     "opacity": 0.65
-     // };
-     // var pendienteStyle = {
-     //     "color": "#007800",
-     //     "weight": 1,
-     //     "opacity": 0.65
-     // };
+      //aqui se puede implementar un metodo que lea datos en formato GEOJSON
+      //las capas que deben existir son: Localizado,Pendiente de desactivación, Destruido, Retirado, No localizado
+      var pendiente = new L.geoJson(noexPendiente, {
+        onEachFeature: popUpInfo, // Llamma la función popUpInfo para presentar los datos de tipo
+        pointToLayer: function(feature, latlng) {
+          return new L.marker(latlng, { icon: redIcon });
+        }
+      });
 
-      L.marker([41.8560593, -0.97734], {icon: redIcon})
-          .bindPopup('Mortero 155').addTo(localizado),
-      L.marker([41.8960593, -0.99734], {icon: yellowIcon})
-          .bindPopup('Granada mano').addTo(pendiente),
-      L.marker([41.8620593, -0.95334], {icon: greenIcon})
-          .bindPopup('Obus 105').addTo(destruido);
-      L.marker([41.8730593, -0.98234], {icon: greenIcon})
-          .bindPopup('Obus 105').addTo(destruido);
-      L.marker([41.8530493, -0.97934], {icon: blueIcon})
-          .bindPopup('Obus 105').addTo(retirado);
-      L.marker([41.8430593, -0.96434], {icon: greyIcon})
-          .bindPopup('Obus 105').addTo(noLocalizado);
+      var retirado = new L.geoJson(noexRetirado, {
+        onEachFeature: popUpInfo, // Llamma la función popUpInfo para presentar los datos de tipo
+        pointToLayer: function(feature, latlng) {
+          return new L.marker(latlng, { icon: greenIcon });
+        }
+      });
+
+      var localizado = new L.LayerGroup();
+      //var pendiente = new L.LayerGroup();
+      var destruido = new L.LayerGroup();
+      //var retirado = new L.LayerGroup();
+      var noLocalizado = new L.LayerGroup();
+
+      L.marker([41.8560593, -0.97734], { icon: yellowIcon })
+        .bindPopup("Mortero 155")
+        .addTo(localizado),
+        L.marker([41.8620593, -0.95334], { icon: greyIcon })
+          .bindPopup("Obus 105")
+          .addTo(noLocalizado);
+      L.marker([41.7720593, -0.91234], { icon: blueIcon })
+        .bindPopup("Obus 105")
+        .addTo(destruido);
 
       var osmLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>',
-          thunLink = '<a href="http://thunderforest.com/">Thunderforest</a>';
-                  
-      var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-          osmAttrib = '&copy; ' + osmLink;
-          tfUrl = 'http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png',
-          thunAttrib = '&copy; ' + thunLink;
-  
-      var osmMap = L.tileLayer(osmUrl, {attribution: osmAttrib}),
-          tfMap = L.tileLayer(tfUrl, {attribution: thunAttrib});
-      // para poner cartografia del IGN creamos estas capas, copiando las caracteristicas como layer y version que necesitemos          
+        thunLink = '<a href="http://thunderforest.com/">Thunderforest</a>';
+
+      var osmUrl = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        osmAttrib = "&copy; " + osmLink;
+      (tfUrl = "http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png"),
+        (thunAttrib = "&copy; " + thunLink);
+
+      var osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib }),
+        tfMap = L.tileLayer(tfUrl, { attribution: thunAttrib });
+      // para poner cartografia del IGN creamos estas capas, copiando las caracteristicas como layer y version que necesitemos
       // "http://www.ign.es/wms-inspire/pnoa-ma?REQUEST=GetCapabilities&SERVICE=WMS"
       // Leaflet por defecto emplea el EPSG:3857 (Proyección WGS84 / Pseudo-Mercator) comprobar que la capa contiene ese formato.
       // si no  lo tiene habria que transformar las coordenadas.
       var pnoa = L.tileLayer.wms("http://www.ign.es/wms-inspire/pnoa-ma", {
-          layers: "OI.OrthoimageCoverage",//layer queryable name
-          format: 'image/jpeg',
-          transparent: false,
-          version: '1.3.0',//wms version
-          attribution: "Cedido por © Instituto Geográfico Nacional de España"
-          });
+        layers: "OI.OrthoimageCoverage", //layer queryable name
+        format: "image/jpeg",
+        transparent: false,
+        version: "1.3.0", //wms version
+        attribution: "Cedido por © Instituto Geográfico Nacional de España"
+      });
       var base = L.tileLayer.wms("http://www.ign.es/wms-inspire/mapa-raster", {
-          layers: "mtn_rasterizado",//layer queryable name
-          format: 'image/jpeg',
-          transparent: false,
-          version: '1.3.0',//wms version 
-          attribution: "Cedido por © Instituto Geográfico Nacional de España" 
-          });
-      var map = L.map('map', {
+        layers: "mtn_rasterizado", //layer queryable name
+        format: "image/jpeg",
+        transparent: false,
+        version: "1.3.0", //wms version
+        attribution: "Cedido por © Instituto Geográfico Nacional de España"
+      });
+      var map = L.map("map", {
         layers: [osmMap], // solo se pone una capa
-              zoomControl:true, //para poner parametros en el zoom
-        minZoom:11  //es el zoom minimo, aqui suficiente para ver todo el CENAD
-      })
-      .setView([41.8100593, -0.98734], 11); //las coordenadas donde se inicia el visor y el zoom por defecto
+        zoomControl: true, //para poner parametros en el zoom
+        minZoom: 11 //es el zoom minimo, aqui suficiente para ver todo el CENAD
+      }).setView([41.8100593, -0.98734], 11); //las coordenadas donde se inicia el visor y el zoom por defecto
+
       var baseLayers = {
         "MAPA OSM": osmMap,
-              "Carto. IGN": base,
-              "Ortofoto": pnoa
+        "Carto. IGN": base,
+        Ortofoto: pnoa
       };
-      var overlays = {
-            "Localizado": localizado,  //capa de informacion geografica
-            "Pendiente": pendiente,  //capa de informacion geografica
-            "Destruido": destruido,  //capa de informacion geografica
-            "Retirado": retirado,  //capa de informacion geografica
-            "No Localizado": noLocalizado  //capa de informacion geografica
-      };
-      L.control.layers(baseLayers,overlays).addTo(map);
-            // anyadimos control de escala
-            L.control.scale({options: {position: 'bottomleft',maxWidth: 100,metric: true,updateWhenIdle: false}}).addTo(map);
-  </script>
-</body>
 
+      //definimos una capa activa por defecto
+      localizado.addTo(map);
+      pendiente.addTo(map);
+
+      var overlays = {
+        Localizado: localizado, //capa de informacion geografica
+        Pendiente: pendiente, //capa de informacion geografica
+        Destruido: destruido, //capa de informacion geografica
+        Retirado: retirado, //capa de informacion geografica
+        "No Localizado": noLocalizado //capa de informacion geografica
+      };
+      L.control.layers(baseLayers, overlays).addTo(map);
+      // anyadimos control de escala
+      L.control
+        .scale({
+          options: {
+            position: "bottomleft",
+            maxWidth: 100,
+            metric: true,
+            updateWhenIdle: false
+          }
+        })
+        .addTo(map);
+    </script>
+  </body>
 </html>
