@@ -1,3 +1,6 @@
+# Proyecto: AGNEX (Aplicación para la Gestión de Artefactos No Explosionados)
+##  Acta de reunión de planificación (`Sprint`) nº1
+
 1. **Información General:**
 
 **Fecha de realización:**
