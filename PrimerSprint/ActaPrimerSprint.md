@@ -1,7 +1,7 @@
 # Proyecto: AGNEX (Aplicación para la Gestión de Artefactos No Explosionados)
 ##  Acta de reunión de planificación (`Sprint`) nº1
 
-1. **Información General:**
+### 1. **Información General:**
 
 **Fecha de realización:**
 
@@ -11,7 +11,7 @@
 
 **Asistentes a la reunión** : Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
 
-2. **Objetivos de la reunión**
+### 2. **Objetivos de la reunión**
 
 Se trataron los siguientes temas:
 
@@ -19,7 +19,7 @@ Se trataron los siguientes temas:
 - Establecimiento del pivote
 - Tareas a realizar en el _sprint_
 
-  2.1 **. Asignación de Roles para el Proyecto**
+####  2.1 **. Asignación de Roles para el Proyecto**
 
 - Se acuerda distribuir los diferentes roles entre el personal del equipo, que quedan como sigue:
 
@@ -30,12 +30,12 @@ Se trataron los siguientes temas:
 **Equipo de trabajo:** Julio Rodríguez Romero, José María Baviera Viguer, Julio César Martín Martín y José Luis Rodríguez Molleja
 
 
-  2.2 **. Establecimiento del pivote**
+####  2.2 **. Establecimiento del pivote**
 
   - Se discute la magnitud del pivote que servirá de referencia para marcar el ritmo del proyecto. Se toma como medida el CRUD de una tabla simple, que se establece finalmente en 15 unidades sobre 100.
 
 
-  2.3 **. Tareas a realizar en el**  **sprint**
+####  2.3 **. Tareas a realizar en el**  **sprint**
 
   Se identifican y reparten las diferentes tareas a realizar por los miembros del equipo:
 
@@ -48,6 +48,5 @@ Se trataron los siguientes temas:
 - Tabla _Kan-ban_
 - _Sprint backlog_
 - Acta del _sprint_ (este documento)
-
 
 Se establece una duración del Sprint de 10 días, finalizando el martes, 29 de mayo de 2019.
