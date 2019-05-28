@@ -49,5 +49,5 @@ Se trataron los siguientes temas:
 - _Sprint backlog_
 - Acta del _sprint_ (este documento)
 
-Se establece una duración del Sprint de 10 días, finalizando el martes, 29 de mayo de 2019.
+Se establece una duración del Sprint de 10 días, finalizando el martes, 28 de mayo de 2019.
 
