@@ -91,4 +91,4 @@ solo consulta para poder visualizar el mapa de la zona con los artefactos.
         flexibles, tomas de red de suministro….
 
     -   **Situación de antenas** en el campo con sus capacidades (radioenlace,
-        láser, grupo electrógeno, placa solar  operatividad…)
+        láser, grupo electrógeno, placa solar  operatividad…).
